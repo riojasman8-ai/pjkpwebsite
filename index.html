@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="id"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pembangunan Jalan Kawasan Pendukung KIPP 1A</title>
+<style>
+:root{--red:#c8282e;--blue:#1f5f99;--gold:#e8a91a;--bg:#f0edde;--ink:#1d2433}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.45 "Segoe UI",system-ui,sans-serif}
+header{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;padding:20px 28px;background:linear-gradient(#fff,var(--bg))}
+header img{height:70px;max-width:260px;object-fit:contain}.hl{display:flex;gap:14px;align-items:center}
+.ttl{text-align:center;flex:1;min-width:260px}.ttl .a{font-size:clamp(22px,3.2vw,40px);letter-spacing:1px}.ttl .b{font-size:clamp(26px,4vw,50px);font-weight:800;line-height:1.1}
+main{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,520px),1fr));gap:22px;padding:18px 28px 90px;max-width:1700px;margin:auto}
+.card{background:#fffdf6;border-radius:16px;padding:18px;box-shadow:0 2px 10px #0002;position:relative}.wide{grid-column:1/-1}
+.rb{display:block;width:fit-content;margin:-30px auto 14px;background:var(--red);color:#fff;font-weight:800;letter-spacing:1px;padding:4px 26px;clip-path:polygon(0 0,100% 0,96% 100%,4% 100%);text-transform:uppercase}.rb.b{background:var(--blue)}.rb.g{background:#0f8bb5}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:18px}@media(max-width:700px){.two{grid-template-columns:1fr}}
+.kv{margin-bottom:9px;font-size:13px}.kv b{display:block;color:var(--red);font-size:12px;text-transform:uppercase}.kv div{white-space:pre-line}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:14px}
+.it{position:relative;text-align:center;font-size:13px;font-weight:600}.it img{width:100%;height:100px;object-fit:contain}
+.sc .it{display:flex;align-items:center;gap:8px;text-align:left}.sc .it img{width:64px;height:64px;flex:none;border-radius:6px}
+.pic{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}.pic .it img{height:auto;max-height:230px;border-radius:8px;object-fit:cover}
+.full{width:100%;border-radius:8px;display:block}
+.lay{display:grid;grid-template-columns:2fr 1fr;gap:14px;align-items:center}@media(max-width:700px){.lay{grid-template-columns:1fr}}
+.chip{position:relative;border-radius:10px;padding:5px 10px;margin:6px 0;text-align:center;font-weight:800;color:#111;border:2px solid #0003}.chip small{display:block;font-weight:700}
+.stat{display:flex;flex-wrap:wrap;gap:18px;justify-content:center;align-items:center}
+.big{font-size:54px;font-weight:800;line-height:1;text-align:center;color:var(--blue)}.big small{display:block;font-size:20px;letter-spacing:6px;color:#222;font-weight:600}
+.pie{width:130px;height:130px;border-radius:50%}.lg{font-size:13px}.lg i{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:6px}
+.man span.tag{display:inline-block;color:#fff;padding:3px 18px;border-radius:8px;font-weight:800;margin:3px 0}
+.keu{background:linear-gradient(#f6e2a2,#e9c566);border-radius:12px;padding:14px;font-size:19px;font-weight:700}.keu p{margin:5px 0}.keu b{display:inline-block;min-width:60px}
+.prg{background:linear-gradient(#f6e2a2,#e9c566);border-radius:12px;padding:14px;display:grid;grid-template-columns:repeat(3,1fr);gap:8px;text-align:center}
+.prg h4{margin:0;font-size:22px}.prg div span{font-size:26px;font-weight:700;color:#3c7a98}.prg .cut{grid-column:1/-1;font-weight:800;font-size:18px}
+footer{text-align:center;padding:10px 0 30px;font-size:13px;color:#777}footer a{color:#777;cursor:pointer}
+.adm{display:none}.admin .adm{display:inline-block}
+.admin [data-p]{outline:1px dashed #1f5f99aa;outline-offset:2px;min-width:20px;cursor:text}.admin [data-img]{cursor:pointer;outline:2px dashed #e8a91a}
+.x{position:absolute;top:-6px;right:-6px;width:22px;height:22px;border-radius:50%;border:0;background:#c8282e;color:#fff;cursor:pointer;z-index:2}
+.add{margin-top:10px;background:var(--blue);color:#fff;border:0;border-radius:8px;padding:6px 14px;cursor:pointer}
+.col{position:absolute;left:4px;top:4px;width:28px;height:22px;padding:0;border:0}
+#bar{position:fixed;left:0;right:0;bottom:0;background:#111;color:#fff;padding:10px 18px;display:none;gap:10px;align-items:center;z-index:9;flex-wrap:wrap}.admin #bar{display:flex}
+#bar button{border:0;border-radius:8px;padding:8px 16px;font-weight:700;cursor:pointer}#sv{background:var(--gold)}
+dialog{border:0;border-radius:14px;padding:24px;box-shadow:0 10px 40px #0006}dialog input{display:block;width:260px;margin:8px 0;padding:9px;border:1px solid #bbb;border-radius:8px}
+dialog button{padding:9px 18px;border:0;border-radius:8px;background:var(--blue);color:#fff;font-weight:700;cursor:pointer}dialog small{display:block;color:#888;margin-top:8px;max-width:260px}
+#toast{position:fixed;top:14px;right:14px;background:#111;color:#fff;padding:10px 16px;border-radius:8px;display:none;z-index:20}
+</style></head><body>
+<header id="hd"></header><main id="app"></main>
+<footer><span id="mode"></span> <a id="lg">🔒 Admin</a></footer>
+<div id="bar"><b>MODE ADMIN</b><span style="opacity:.7">klik teks untuk mengetik · klik gambar untuk mengganti foto</span><span style="flex:1"></span><button id="sv">💾 Simpan</button><button id="lo">Keluar</button></div>
+<dialog id="dlg"><form method="dialog" id="fm"><h3 style="margin-top:0">Login Admin</h3>
+<input id="u" placeholder="Username" autocomplete="username"><input id="p" type="password" placeholder="Password" autocomplete="current-password">
+<button>Masuk</button><small id="hint"></small></form></dialog>
+<div id="toast"></div>
+<script src="firebase-config.js"></script><script type="module" src="app.js"></script>
+</body></html>
