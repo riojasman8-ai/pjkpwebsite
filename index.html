@@ -94,14 +94,70 @@ main{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,520px),1
     grid-template-columns: 1fr;
   }
 }
-/* Layout & ROW Chips */
-.lay{display:grid;grid-template-columns:2.2fr 1fr;gap:18px;align-items:center}@media(max-width:768px){.lay{grid-template-columns:1fr}}
-.chip{
-  position:relative;border-radius:10px;padding:8px 12px;margin:7px 0;text-align:center;
-  font-weight:800;color:#0f172a;border:1px solid rgba(0,0,0,.12);box-shadow:0 2px 5px rgba(0,0,0,.05);
-  display:flex;justify-content:space-between;align-items:center;font-size:13px;
+/* PILIHAN 1: Peta Atas Lebar + Grid Legenda Modern */
+.lay {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
-.chip small{font-weight:800;background:rgba(255,255,255,.65);padding:2px 8px;border-radius:6px}
+.lay > div {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+.chip {
+  position: relative;
+  background: #f8fafc !important;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 10px 14px;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--ink);
+  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.04);
+  overflow: hidden;
+  transition: transform 0.2s;
+}
+.chip:hover {
+  transform: translateY(-2px);
+  background: #ffffff !important;
+}
+/* Garis indikator warna di sisi kiri menggunakan warna bawaan chip */
+.chip::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 6px;
+  background: inherit;
+  filter: saturate(1.2);
+}
+/* Kotak terakhir (TOTAL ROW) melebar penuh & tampil gelap elegan */
+.chip:last-of-type {
+  grid-column: 1 / -1;
+  background: linear-gradient(135deg, #0f172a, #1e293b) !important;
+  color: #ffffff;
+  border: 0;
+  padding: 12px 16px;
+}
+.chip:last-of-type small {
+  background: var(--gold);
+  color: #0f172a;
+}
+.chip small {
+  font-weight: 800;
+  background: #e2e8f0;
+  color: var(--ink);
+  padding: 3px 10px;
+  border-radius: 99px;
+  white-space: nowrap;
+}
 
 /* Personil & Waktu */
 .stat{display:flex;flex-wrap:wrap;gap:20px;justify-content:space-around;align-items:center;padding:8px 0}
