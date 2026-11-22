@@ -187,5 +187,44 @@ dialog::backdrop{background:rgba(15,23,42,.75);backdrop-filter:blur(4px)}
 <div id="toast"></div>
 <script src="firebase-config.js"></script>
 <script type="module" src="app.js"></script>
+  <script>
+// Sistem Tab Halaman (Menampilkan hanya menu yang dipilih + tombol Semua)
+const nav = document.querySelector('nav.qnav');
+nav.insertAdjacentHTML('afterbegin', '<a href="#all" class="active">🌐 Semua Data</a>');
+
+const groups = {
+  '#sec-info': ['sec-info'],
+  '#sec-lingkup': ['sec-lingkup', 'Lingkup Pekerjaan', 'Visualisasi Design', 'Tipikal Pekerjaan'],
+  '#sec-alat': ['sec-alat', 'Alat Berat', 'Layout Pekerjaan'],
+  '#sec-prog': ['sec-prog', 'Pencapaian Pekerjaan', 'Berdasarkan Kurva-S', 'Personil & Waktu', 'Progress Keuangan'],
+  '#sec-doc': ['sec-doc', 'Dokumentasi']
+};
+
+function showTab(hash) {
+  nav.querySelectorAll('a').forEach(a => {
+    const active = a.getAttribute('href') === hash;
+    a.style.background = active ? 'var(--blue)' : '';
+    a.style.color = active ? '#fff' : '';
+  });
+
+  const keys = groups[hash];
+  document.querySelectorAll('main > section.card').forEach(sec => {
+    if (!keys || hash === '#all') {
+      sec.style.display = '';
+    } else {
+      const match = keys.includes(sec.id) || keys.some(k => sec.textContent.includes(k));
+      sec.style.display = match ? '' : 'none';
+    }
+  });
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+nav.addEventListener('click', e => {
+  const link = e.target.closest('a');
+  if (!link) return;
+  e.preventDefault();
+  showTab(link.getAttribute('href'));
+});
+</script>
 </body>
 </html>
